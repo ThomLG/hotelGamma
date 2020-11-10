@@ -1,0 +1,34 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Les projets de la ville{% endblock %}
+
+{% block body %}
+    <section class="container home-content">
+        <h1>Bienvenue à l'hotel Gamma</h1>
+
+        <h2>Les détails du logement</h2>
+        <div class="grid grid-rooms">
+        <article>
+            <header>
+                <img src="" class="img-responsive" alt="Chambre Standard">
+            </header>
+            <footer>
+                <h3>{{ accomodation.type.name }} {{ accomodation.category.name }}</h3>
+                    <p>{{ accomodation.description }}</p>
+                <ul class="room-features">
+                    <li><i class="fa fa-bed"></i> Nombre de lits: {{ accomodation.beds }}</li>
+                    <li><i class="fa fa-user"></i> Nombre de personnes: {{ accomodation.persons }}</li>
+                    <li><i class="fa fa-expand"></i>Taille du logement: {{ accomodation.size }}m²</li>
+                    <li><i class="fa fa-euro"></i>Prix: {{ accomodation.price }} par nuit</li>
+                </ul>
+                <a href="accomodation.html" class="button button-primary">
+                    <i class="fa fa-check"></i>
+                    Réservez le logement
+                </a>
+            </footer>
+        </article>
+        </div>
+    </section>
+
+
+{% endblock %}
